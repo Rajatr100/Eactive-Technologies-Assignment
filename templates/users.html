@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>All Users</title>
+  <style>
+    table { border-collapse: collapse; width: 80%; margin: 20px auto; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f4f4f4; }
+    .center { text-align: center; }
+  </style>
+</head>
+<body>
+  <h2 class="center">All Users</h2>
+  <div class="center"><a href="/new_user">Add New User</a></div>
+  <table>
+    <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th></tr></thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td><a href="{{ url_for('user_detail', user_id=user.id) }}">{{ user.id }}</a></td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
