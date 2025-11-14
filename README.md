@@ -15,7 +15,7 @@ Features
 
 Error handling for missing users (404 page)
 
-⚙️ Environment Setup
+ Environment Setup
 1️- Install Python
 
 Make sure Python 3.x is installed.
@@ -34,16 +34,16 @@ pip install flask
 
 3️- Project Structure
 flask_project/
-│
-├── app.py
-├── init_db.py
-├── schema.sql
-├── users.db
-│
-└── templates/
-    ├── users.html
-    ├── new_user.html
-    └── user_detail.html
+
+ app.py
+init_db.py
+schema.sql
+users.db
+
+templates/
+    users.html
+    new_user.html
+     user_detail.html
 
 4- Database Setup
 Database Name:
